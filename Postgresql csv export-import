@@ -1,0 +1,5 @@
+
+
+Postgresql de copy ile csv formatlarını import ve export etme 
+COPY (select "UserId" , "Score" , "Comment" , "ExtraOption" , "CreatedDate" , isanonymous from "Scores" where "Comment" !='' and "UserId" != '' and "CreatedDate" > '2020-05-31 16:00:00') TO '/tmp/scores.csv'  
+(FORMAT CSV, HEADER TRUE, DELIMITER ';', ENCODING 'UTF8');
